@@ -113,6 +113,12 @@
 }
 #theme-toggle:active { opacity: 0.8; }
 
+[data-theme="light"] #goto-manual {
+  background: rgba(180,130,0,0.10) !important;
+  color: #8a6000 !important;
+  border-color: rgba(180,130,0,0.35) !important;
+}
+
 /* ─── 리셋 & 베이스 ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -2949,6 +2955,22 @@ body.game-screen-active .game-header-top {
 
  <!-- 테마 토글 버튼 -->
   <button id="theme-toggle" aria-label="라이트 모드로 전환" title="라이트/다크 모드 전환">☀️ 라이트</button>
+
+  <!-- 사용설명서 바로가기 -->
+  <a href="manual.html" target="_blank" id="goto-manual" title="교사용 사용설명서 열기" style="
+    position:fixed; top:14px; left:14px; z-index:9999;
+    display:inline-flex; align-items:center; gap:6px;
+    background:rgba(245,200,66,0.15); color:#F5C842;
+    border:1px solid rgba(245,200,66,0.35); border-radius:10px;
+    padding:7px 14px; font-size:12px; font-weight:700;
+    text-decoration:none; letter-spacing:0.02em;
+    backdrop-filter:blur(8px);
+    transition:background .2s, border-color .2s;
+  "
+  onmouseover="this.style.background='rgba(245,200,66,0.28)';this.style.borderColor='rgba(245,200,66,0.6)'"
+  onmouseout="this.style.background='rgba(245,200,66,0.15)';this.style.borderColor='rgba(245,200,66,0.35)'">
+    📋 교사 가이드
+  </a>
 
   <!-- =============================================
        SCREEN 1 : 홈 화면
